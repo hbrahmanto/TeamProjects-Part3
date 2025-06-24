@@ -1,0 +1,474 @@
+/*Global*/
+
+body {
+
+    box-sizing: border-box;
+
+}
+
+/*Top Navigation Bar*/
+
+#topLeft {
+
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+}
+
+#profilePicture {
+
+    width: 2.5em;
+    height: 2.5em;
+    margin: 0.1em;
+    margin-right: 0.5em;
+
+}
+
+#user {
+
+    flex-direction: column;
+
+}
+
+#username p {
+
+    font-size: 0.9em;
+    margin-top: 0.3em;
+    margin-bottom: 0em;
+
+}
+
+#userAccess p {
+
+    font-size: 0.7em;
+    margin-top: 0em;
+
+}
+
+#top {
+
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgb(218, 218, 218);
+
+}
+
+#topCenter {
+
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+
+    @media only screen and (max-width: 850px) { 
+
+        margin-bottom: 2%;
+
+    }
+
+}
+
+#topRight {
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-top: 0.6%;
+
+}
+
+/*Side Navigation Bar*/
+
+#sideBarOptions {
+
+    position: relative;
+    margin-top: 15%;
+
+}
+
+#sideBarOptions button {
+
+    background: none;
+    border: none;
+
+}
+
+#sideBarOptions ul {
+
+    list-style-type: none;
+
+}
+
+#sideBarOptions summary::-webkit-details-marker {
+
+    display: none;
+
+}
+
+#settings::before {
+
+    content: url('Assets/Settings.png');
+    position: absolute;
+    left: 1%;
+
+}
+
+#notifications::before {
+
+    content: url('Assets/Bell.png');
+    position: absolute;
+    left: 1%;
+
+}
+
+#starred::before {
+
+    content: url('Assets/Star.png');
+    position: absolute;
+    left: 1%;
+
+}
+
+#dark::before {
+
+    content: url('Assets/Moon.png');
+    position: absolute;
+    left: 1%;
+
+}
+  
+#sideBarOptions summary::after {
+
+    content: '\⟩';
+    float: right;
+
+}
+
+#sideBarOptions details[open] summary::after {
+
+    transform: rotate(90deg);
+
+}
+
+#sideBarOptions summary {
+
+    margin-bottom: 7%;
+
+}
+
+#sideBarOptions details {
+
+    padding-bottom: 4%;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    margin-bottom: 4%;
+
+}
+
+/*Chat System*/
+
+#centreHome {
+
+
+    width:80%;
+    margin:auto;
+    padding: 50px;
+    text-align: center;
+
+}
+
+#centreNewMessage {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+#centreHome button {
+
+    display: block;
+    margin: 10px auto;
+    width: 400px;
+    height: 110px;
+    font-size: 18px;
+
+}
+
+#centreNewGroup {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+#centreNewMessage button {
+
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+    height: 20px;
+    font-size: 12px;
+
+}
+
+#centreNewGroup button {
+
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+    height: 20px;
+    font-size: 12px;
+
+}
+
+#bottomMiddle {
+
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+}
+
+#backHome {
+
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+#createGroup {
+
+    position: absolute;
+    top: 25%;
+    right: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+#newGroup {
+
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+#centrePersonalChat{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+#centrePersonalChat button {
+
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+    height: 20px;
+    font-size: 12px;
+
+}
+
+/*Chat System*/
+#chatSystem {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+#chatWindow {
+
+    display: flex;
+    width: 75%;
+
+}
+
+.sentChatBubbleExt {
+
+    justify-content: flex-end;
+
+}
+
+.receivedChatBubbleExt, .sentChatBubbleExt {
+
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+
+}
+
+#profilePicture2 {
+
+    position: relative;
+    width: 3.5em;
+    height: 3.5em;
+    left: -1%;
+    top: 30%
+
+}
+
+.receivedChatBubble {
+
+    background-color: rgb(255, 187, 142);
+
+}
+
+.sentChatBubble {
+
+    background-color: rgb(240, 240, 240);
+
+}
+
+.receivedChatBubble, .sentChatBubble {
+
+    max-width: 55%;
+    padding-left: 2%;
+    padding-top: 1%;
+    padding-right: 2%;
+    border-radius: 15px;
+    margin-top: 2%;
+
+}
+
+.chatMessage {
+
+    word-wrap: break-word;
+    padding-bottom: 2%;
+
+}
+
+.sentTime {
+
+    font-size: 0.7rem;
+    color: rgb(136, 136, 136);
+    float: right;
+    shape-outside: inset(calc(100% - 100px) 0 0);
+    padding-left: 2%;
+    padding-top: 2%;
+
+}
+
+/* Bottom Nav Bar */
+#bottomNavBar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6; 
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around; 
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1); 
+}
+
+#bottomNavBar button {
+    padding: 10px 20px;
+    background-color: #ffc107; 
+    color: black; 
+    border: none;
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+#bottomNavBar button:hover {
+    background-color: #e0a800; 
+}
+
+/* Chat Divider */
+.chat-container {
+    margin-bottom: 10px; /* Space between messages */
+}
+
+.chat-toggle {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-name {
+    font-weight: bold;
+    font-size: large;
+}
+
+.last-message-div {
+    font-size: small;
+}
+
+.message-text {
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+/* Message Box */
+.message-input-container {
+    position: fixed;  
+    bottom: 70px;  
+    left: 0;
+    right: 0;
+    padding: 5px 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    box-sizing: border-box; 
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+#messageInput {
+    width: 70%;
+    padding: 11px 15px;  
+    font-size: 16px;  
+    border: 2px solid #f0f0f0;  
+    border-radius: 20px;  
+    border-color: rgba(163, 163, 163, 0.817);
+    outline: none;  
+    background: #fff;  
+}
+
+#group-user-select{
+    margin-right: auto;
+    height: 500px;
+    width: 400px;
+    margin-left: auto;
+}
+
+#group-chat-creation button{
+    margin:5px;
+
+}

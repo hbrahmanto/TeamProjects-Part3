@@ -1,0 +1,28 @@
+This guide covers the method and credentials required to login to various tools
+for accessing and editing the GCP VM for the team project.
+NOTE - the correct vm instance is "part3-restapi" on gcp
+
+details contained in square brackes, such as: [example] 
+mean the data inside them is subject to change whenever the VM is restarted.
+
+
+-- PHP MyAdmin --
+access the VM's PHP MyAdmin page using:
+[external IP]/phpmyadmin
+
+To login to the database use the following details:
+Username: debian-sys-maint
+Password: IZqESYqnzEnILCP4
+
+
+-- WinSCP --
+!  you will need to download the "Private Key.ppk" file, inside the folder with this text documnet.
+
+To access the VM's directory using WinSCP, create a new profile with the following details:
+File Protocal: SFTP
+Hostname: [External IP]
+Username: rsa-key-20240312				! this username is obtained through the Compute Enginge Dashboard -> Settings -> Metadata -> SSH Keys
+Password: team01              			
+Advanced Options -> SSH -> Authentication -> Private Key File: choose the "Private Key.ppk" file 
+
+To get to the web server files go after you are connected: up -> up -> var -> www -> html
