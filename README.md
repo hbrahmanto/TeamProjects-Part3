@@ -1,2 +1,2 @@
 # TeamProjects-Part3
-
+In this coursework we worked as a 6 people to create a web application that is specified through a requirements list given by the university. The objective of this coursework is to be able to work as a team and asking questions to the clients about what features should the web application include. Unfortunately the code cannot be run anymore again as the database and GCP is no longer running.
